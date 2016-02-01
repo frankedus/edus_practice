@@ -8,9 +8,9 @@ function isPalindrome(number) {
     palindrome += String(number)[i];
   }
   if (palindrome === String(number)) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
@@ -25,6 +25,30 @@ console.log(isPalindrome(12233221));
 //if then previous one was to easy for you, pleas implement a method, that returns the prime numbers between 2 and 100. If the current number is a palindrome too, than return 'Zeno' instead of the number.
 //feel free to use, the previous written pythn algorithm
 //test method is missing on purpose.
+
+function isPrimeTheGivenNumber(number) {
+  for (var i = 2; i < number; i++) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+function getPrimeNumbers(minimum, maximum) {
+  for (var i = minimum; i <= maximum; i++) {
+    if (isPrimeTheGivenNumber(i) === true) {
+      if (isPalindrome(i) && i > 9) {
+        console.log('Zeno');
+      } else {
+        console.log(i);
+      }
+    }
+  }
+}
+
+getPrimeNumbers(2, 100);
 
 
 
