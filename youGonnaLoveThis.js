@@ -36,17 +36,8 @@ function isPrimeTheGivenNumber(number) {
 }
 
 
-function getPrimeNumbers(minimum, maximum) {
-  for (var i = minimum; i <= maximum; i++) {
-    if (isPrimeTheGivenNumber(i) === true) {
-      if (isPalindrome(i) && i > 9) {
-        console.log('Zeno');
-      } else {
-        console.log(i);
-      }
-    }
-  }
-}
+function getPrimeNumbers(2, 100) {
+  
 
 getPrimeNumbers(2, 100);
 
