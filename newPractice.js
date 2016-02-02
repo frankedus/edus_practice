@@ -20,7 +20,7 @@ function Ship(pirates) {
 
   this.woddenLegTax = function () {
     this.pirates.forEach(function(pirate) {
-      if (pirate.woddenLeg === true) {
+      if (pirate.woddenLeg) {
         pirate.gold -= 50;
       }
     });
